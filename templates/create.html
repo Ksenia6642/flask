@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавить статью
+{% endblock %}
+
+{% block body %}
+<div style="padding-right: 15%">
+    <div style="margin-bottom: 25px;">
+        <h1 class="blog-header-logo text-dark">Добавление статьи</h1>
+    </div>
+
+    <form method="post">
+        <div class="mb-3">
+            <label>Заголовок </label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="Введите заголовок">
+        </div>
+        <div class="mb-3">
+            <label> Анонс</label>
+            <textarea type="text" name="intro" id="intro" class="form-control" placeholder="Введите ананос"></textarea>
+        </div>
+        <div class="mb-3">
+            <label> Текст</label>
+            <textarea type="text" name="text" id="text" class="form-control" placeholder="Введите текст "></textarea>
+        </div>
+        <div class="col-md-5 mb-3">
+            <label>Категория</label>
+            <select class="custom-select d-block w-100" name="category" required="">
+                <option value="business">Бизнес</option>
+                <option value="culture">Культура</option>
+                <option value="world">Мир</option>
+                <option value="opinion">Мнение</option>
+                <option value="sсience">Наука</option>
+                <option value="politics">Политика</option>
+                <option value="technology">Технологии</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid country.
+            </div>
+        </div>
+        <input type="submit" class="btn btn-success" value="Отправить"><br>
+    </form>
+</div>
+{% endblock %}

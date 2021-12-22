@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Редактирование статьи
+{% endblock %}
+
+{% block body %}
+<div style="padding-right: 15%">
+    <div style="margin-bottom: 25px;">
+        <h1 class="blog-header-logo text-dark">Добавление статьи</h1>
+    </div>
+
+    <form method="post">
+        <div class="mb-3">
+            <label>Заголовок </label>
+            <textarea type="text" name="title" id="title" class="form-control" placeholder="Введите ананос">{{article.title}}</textarea>
+        </div>
+        <div class="mb-3">
+            <label> Анонс</label>
+            <textarea type="text" name="intro" id="intro" class="form-control" placeholder="Введите ананос">{{article.intro}}</textarea>
+        </div>
+        <div class="mb-3">
+            <label> Текст</label>
+            <textarea type="text" name="text" id="text" class="form-control" placeholder="Введите текст " >{{article.text}}</textarea>
+        </div>
+        <div class="col-md-5 mb-3">
+            <label>Категория</label>
+            <select class="custom-select d-block w-100" name="category" required="">
+                <option value="business">Бизнес</option>
+                <option value="culture">Культура</option>
+                <option value="world">Мир</option>
+                <option value="opinion">Мнение</option>
+                <option value="science">Наука</option>
+                <option value="politics">Политика</option>
+                <option value="technology">Технологии</option>
+            </select>
+            <div class="invalid-feedback">
+                Please select a valid country.
+            </div>
+        </div>
+        <input type="submit" class="btn btn-success" value="Сохранить"><br>
+    </form>
+</div>
+{% endblock %}

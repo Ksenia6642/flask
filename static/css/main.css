@@ -1,0 +1,43 @@
+.container {
+    padding-right: 3%;
+    padding-left: 3%;
+}
+.shapka {
+    background: white;
+    flex-direction: row;
+    padding-right: 5%;
+    padding-left: 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    flex-direction: row;
+}
+
+.text {
+font-weight: normal;
+}
+
+body {
+    flex-direction: column;
+}
+
+.blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.5rem;
+}
+.blog-header {
+    flex: row;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.font{
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+

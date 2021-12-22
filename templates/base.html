@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<div class="container">
+    <header class="blog-header">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 pt-1">
+                <a class="btn btn-sm btn-outline-secondary" href="/login">Войти</a>
+            </div>
+            <div class="col-4 text-center">
+                <a class="blog-header-logo text-dark" >Блог</a>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+                <a class="btn btn-sm btn-outline-secondary" href="/sign-up">Зарегистрироваться</a>
+            </div>
+        </div>
+    </header>
+    <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+            <a class="p-2 text-muted" href="/posts/world">Мир</a>
+            <a class="p-2 text-muted" href="/posts/technology">Технологии</a>
+            <a class="p-2 text-muted" href="/posts/culture">Культура</a>
+            <a class="p-2 text-muted" href="/posts/business">Бизнес</a>
+            <a class="p-2 text-muted" href="/posts/politics">Политика</a>
+            <a class="p-2 text-muted" href="/posts/opinion">Мнение</a>
+            <a class="p-2 text-muted" href="/posts/science">Наука</a>
+            <a class="p-2 text-muted" href="/create">Добавить статью</a>
+            <a class="p-2 text-muted" href="/posts/all">Все статьи</a>
+            <a class="p-2 text-muted" href="/profile">Профиль</a>
+        </nav>
+    </div>
+    <div class="container">
+        {% block body %}{% endblock %}
+
+    </div>
+</div>
+</body>
+</html>
